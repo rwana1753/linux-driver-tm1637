@@ -996,7 +996,7 @@ static int tm1637_probe(struct platform_device *pdev)
 	}
 
 	ret = misc_register(&tm1637_misc);
-	if (!ret) {
+	if (ret) {
 		goto fail;
 	}
 
